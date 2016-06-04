@@ -1,0 +1,33 @@
+.headerRow{
+	background-color: #2c303e
+}
+
+.nameWidth{
+	width: 8%;
+}
+
+.valueWidth{
+	width:15%;
+}
+
+.data{
+	color: #fba800;
+}
+
+.noData{
+	color: rgba(158,158,158);
+}
+
+.active {
+    background-color: lightgreen;
+}
+
+.actionButton { 
+	cursor: pointer;
+	cursor: hand; 
+}
+
+.btn-warning{
+	background-color: #fba800;
+	border-radius: 4px;
+}

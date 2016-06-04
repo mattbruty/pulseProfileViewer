@@ -1,0 +1,13 @@
+ReadMe
+
+This tool lets you show off current pulse cookies in a more presentable format
+It allows you to show changes to existing cookies, removal of cookie and addition of new cookies, in real time
+It will create dummy pulse data for you if none is currently available
+	TODO: Allow the data created to be customised
+
+How to use:
+
+Pulse cookies: 
+	Name cookies camelCase eg cw_thisIsCamelCase. Tool will output cookie name as "This Is Camel Case"
+	Include "Date" in the name of any cookie whos value is a unix timestamp to have this value converted to a readable timestamp eg "Monday, 23 May 2016 5:27 pm"
+	
