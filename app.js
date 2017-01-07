@@ -3,10 +3,10 @@ var tempArr = [];
 
 function cookieFormat(data) { //Format cookie to look nice when displayed in the browser
     var formattedArr = [];
-    for (cookie in data) {
+    for (cookie in data.cookies) {
         //Tidy up cookie values
         var cookieName = cookie;
-        var cookieValue = data[cookieName];
+        var cookieValue = data.cookies[cookieName];
 
         if (cookie.indexOf('Date') > -1) { //Format date - this is specific to cookies with date in the name, and will format for Australian timezone
             cookieValue = parseInt(cookieValue, '10');
@@ -90,7 +90,7 @@ angular.module('sortApp', []).controller('mainController', function($scope) {
         var domain = $scope.domain;
         var s = document.createElement('script');
         s.type = 'application/x-javascript';
-        s.src = '//' + domain + '/jsonp?callback=pulse';
+        s.src = '//' + domain + '/pc/ens-mbruty/?output=cookies&callback=pulse';
         document.head.appendChild(s);
     };
     $scope.searchCookies = ''; //Set by search value in index.html
