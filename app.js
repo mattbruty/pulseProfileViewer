@@ -84,13 +84,13 @@ angular.module('sortApp', []).controller('mainController', function($scope) {
     };
     $scope.clearData = function() {cookieArr = [];$scope.generateData = 'Generate Data';$scope.cookies = cookieArr;}; //Allows user to clear the data from the screen
     $scope.cookies = cookieArr; //Example format of cookieArr:[{name:'foo',value:'bar'},{name:'displayImpressions',value:'8'}]
-    $scope.domain = 'ens-mbruty.activate.ensighten.com'; //Default value for this field
+    $scope.domain = 't.nc0.co'; //Default value for this field
     $scope.generateData = 'Generate Data';
     $scope.getData = function() { //Function which calls the pulse domain and returns any cookies found, causes pulse function to be called
         var domain = $scope.domain;
         var s = document.createElement('script');
         s.type = 'application/x-javascript';
-        s.src = '//' + domain + '/pc/ens-mbruty/?output=cookies&callback=pulse';
+        s.src = '//' + domain + '/pc/digitalbalance/?output=cookies&callback=pulse';
         document.head.appendChild(s);
     };
     $scope.searchCookies = ''; //Set by search value in index.html

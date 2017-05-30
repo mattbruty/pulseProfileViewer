@@ -89,10 +89,10 @@ function trafficBuilder(domain){
             }
         }
         var paramsString = paramsArray.join('&');
-        var url = "//" + yourAccount + "/no-content?" + paramsString + "&ci_PULSE_counter=1&buster=" + Math.round(Math.random() * 1000000000);
+        var url = "//" + yourAccount + "/pc/digitalbalance/?" + paramsString + "&ci_PULSE_counter=1&buster=" + Math.round(Math.random() * 1000000000);
         var x = new Image();
         x.src = url;
-        x.onerror = (response) => { //onerror signals completion of pixel call which in turn calls the done call back, to appendPixel which then calls previousFunc
+        x.onload = (response) => { //onload signals completion of pixel call which in turn calls the done call back, to appendPixel which then calls previousFunc
             console.log(`${item} pixel complete`);
             done(`${item}`);
         };
