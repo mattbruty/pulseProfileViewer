@@ -90,7 +90,7 @@ angular.module('sortApp', []).controller('mainController', function($scope) {
         var domain = $scope.domain;
         var s = document.createElement('script');
         s.type = 'application/x-javascript';
-        s.src = '//' + domain + '/pc/digitalbalance/?output=cookies&callback=pulse';
+        s.src = '//' + domain + '/pc/ens-mbruty/?output=cookies&callback=pulse';
         document.head.appendChild(s);
     };
     $scope.searchCookies = ''; //Set by search value in index.html
